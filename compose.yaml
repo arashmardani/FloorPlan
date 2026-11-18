@@ -1,0 +1,10 @@
+services:
+  viewer:
+    build: .
+    ports: ["127.0.0.1:8000:8000"]
+    volumes: ["plans:/data"]
+    mem_limit: 1g
+    pids_limit: 64
+    security_opt: ["no-new-privileges:true"]
+volumes:
+  plans:
